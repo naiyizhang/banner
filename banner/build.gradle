@@ -5,6 +5,7 @@ apply plugin: 'signing'
 version = '2.2.3'
 
 android {
+    namespace 'com.youth.banner'
     compileSdk 33
 
     defaultConfig {
@@ -86,8 +87,8 @@ publishing {
             url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
                 // 这里就是之前在 issues.sonatype.org 注册的账号
-                username sonatypeUsername
-                password sonatypePassword
+                username "sonatypeUsername"
+                password "sonatypePassword"
             }
         }
     }
